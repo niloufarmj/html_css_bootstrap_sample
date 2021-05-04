@@ -1,0 +1,210 @@
+.fa {
+    padding: 5px;
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #524f50;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+.transition {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+/* Add a hover effect if you want */
+.change-pink-back:hover {
+    background-color: #ff2060;
+    text-decoration: none;
+    color: white;
+}
+
+a.change-pink-text:hover {
+    color: #ff2060 !important;
+    text-decoration: none;
+}
+
+.drop-item:hover {
+    background-color: white !important;
+    border-bottom-color:#ff2060 !important;
+}
+
+.drop-item {
+    font-size: 11px;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.next-prev {
+    background-color:  #ff2060;
+    padding: 20px;
+    color: white;
+    size: 8px;
+}
+
+.next-prev:hover {
+    background-color: black !important;
+    opacity: 0.7;
+}
+
+.card-shadow:hover {
+    box-shadow: 2px 2px 25px darkgray;
+}
+
+.column {
+    float: left;
+    width: 23%;
+    margin: auto;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+    .column {
+        width: 48%;
+        padding-top: 15px;
+    }
+    #collection-cat-small{
+        display: none;
+    }
+    .m-b-d {
+        display: none;
+    }
+
+    #collection-cat {
+        display: block !important;
+    }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        padding-top: 15px;
+    }
+    #collection-cat{
+        display: none !important;
+    }
+    #collection-cat-small{
+        display: block;
+    }
+    .m-b-d {
+        display: none;
+    }
+
+    .next-prev {
+        padding: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    #collection-cat-small{
+        display: none;
+    }
+    #collection-cat{
+        display: block;
+    }
+}
+
+div.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: dimgray;
+}
+
+div.polaroid:hover .overlay {
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition-duration: 2s;
+}
+
+div.polaroid:hover div.center {
+    color: white !important;
+}
+
+a.center {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.center {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-white:hover {
+    opacity: 0.6;
+}
+
+.card:hover .block-bottom{
+    display: block;
+}
+
+.block-bottom {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+img.brand {
+    opacity: 0.6;
+}
+
+.brand:hover {
+    opacity: 1.2;
+}
+
+.container p:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 40px;
+    background: #ea2c58;
+    margin: auto;
+}
+
+.line {
+    content: '';
+    width: 40px;
+    height: 3px;
+    margin: auto;
+    background-color: #ff2060;
+}
+
+.fixed-distance {
+    margin-top: 100px
+}
+
+.fixed-size {
+    width: 75%;
+}
+
+#cart {
+    font-size: 13px;
+    background-color: #f7f7f7;
+    padding-top: 20px;
+    padding-bottom:20px;
+    padding-left: 20px
+}

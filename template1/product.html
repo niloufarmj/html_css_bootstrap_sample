@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="product_files/bootstrap.css">
+    <script src="product_files/jquery.js"></script>
+    <script src="product_files/popper.js"></script>
+    <script src="product_files/bootstrap.js"></script>
+    <title>
+        THE Mart
+    </title>
+    <link rel="icon" href="http://localhost:63342/html_niloofar/template1/images/shop-icon-md.png">
+    <link rel="stylesheet" href="product_files/font-awesome.css">
+    <style>
+
+        .fa {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .fas {
+            padding: 5px;
+            font-size: 12px;
+            width: 22px;
+            height: 22px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #524f50;
+            margin: 5px;
+            border-radius: 4px;
+        }
+
+        .transition {
+            -o-transition:.5s;
+            -ms-transition:.5s;
+            -moz-transition:.5s;
+            -webkit-transition:.5s;
+            /* ...and now for the proper property */
+            transition:.5s;
+        }
+
+        a.change-pink-text:hover {
+            color: #ff2060 !important;
+            text-decoration: none;
+        }
+
+        .top-nav-item {
+            font-size: 17px;
+            font-weight: bold;
+            color: white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .top-nav-item:hover {
+            background-color: black;
+            border-bottom: 5px solid #ff2060;
+            color: #ff2060;
+        }
+
+        #myCart {
+            background-color: #ff2060;
+            border-radius: 5px;
+        }
+
+        #myCart:hover {
+            background-color: white;
+            color: black !important;
+        }
+
+        #myCart:hover i {
+            color: black !important;
+        }
+
+        #money {
+            color: #c1a880;
+            font-size: 14px;
+            border: none
+        }
+
+        #mySearch {
+            background-color: #333;
+            border: 1px solid #ff2060;
+            color: white;
+            padding: 10px;
+            margin-right: 15px;
+            width: 300px;
+            margin-top: 15px;
+        }
+
+        #searchButton {
+            color: #a5a5a5;
+            border: none;
+            background-color: #333
+        }
+
+        #myTextCount:hover {
+            box-shadow:  inset 0 1px 1px rgba(0,0,0,.075);
+        }
+
+        #myTextCount:active {
+            box-shadow: none;
+        }
+
+        /*phone screen*/
+        @media only screen and (max-width: 600px) {
+            .phone-delete {
+                display: none;
+            }
+        }
+
+        /* tablet screen*/
+        @media screen and (max-width: 992px) {
+            .tablet-delete {
+                display: none;
+            }
+        }
+
+        .table-bordered {
+            border: none;
+            border-top: 1px dashed #e2e3e5;
+            border-bottom: 1px dashed #e2e3e5;
+        }
+
+        .table-bordered td {
+            border: none;
+            border-bottom: 1px dashed #e2e3e5;
+        }
+
+        #addCart {
+            color: white;
+            background-color: #ff2060;
+            border-radius: 25px;
+            padding: 10px 35px 10px 35px;
+            font-weight: bold;
+            border: none;
+            font-size: 15px;
+        }
+
+        #addCart:hover {
+            background-color: black;
+        }
+
+        .tab-bar {
+            border: none;
+            border-radius: 0!important;
+            color: #a5a5a5;
+            background-color: #f5f5f5;
+            margin-right: 15px;
+            padding-right: 25px;
+            padding-left: 25px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .tab-bar:hover {
+            color: #a5a5a5!important;
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff!important;
+            background-color: #333;
+        }
+
+        .line {
+            content: '';
+            width: 40px;
+            height: 3px;
+            margin: auto;
+            background-color: #ff2060;
+        }
+
+        .block-bottom {
+            position: absolute;
+            top: 55%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .card:hover .block-bottom{
+            display: block;
+        }
+
+        .back-white:hover {
+            opacity: 0.6;
+        }
+
+        .change-pink-back:hover {
+            background-color: #ff2060;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            left: 0;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .m-b-d {
+                display: none;
+            }
+        }
+
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .m-b-d {
+                display: none;
+            }
+
+            #single {
+                padding-left: 0!important;
+                padding-right: 0!important;
+            }
+
+            #singlep {
+                width: 100% !important;
+            }
+
+            #bread {
+                width: 100% !important;
+            }
+
+            #breadul{
+                float: none!important;
+            }
+
+            #stock {
+                width: 100% !important;
+            }
+
+            #all-con {
+                width: 90% !important;
+            }
+
+            #half-all {
+                margin-left: 0 !important;
+            }
+
+            #boxes {
+                padding-left: 0 !important;
+            }
+
+            .size {
+                padding: 5px!important;
+                margin: 2px!important;
+            }
+
+            #cat {
+                display: none;
+            }
+
+            #cat-small {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            #cat-small {
+                display: none;
+            }
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            -webkit-border-radius: 0 6px 6px 6px;
+            -moz-border-radius: 0 6px 6px;
+            border-radius: 0 6px 6px 6px;
+        }
+
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu>a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #ccc;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        .dropdown-submenu:hover>a:after {
+            border-left-color: #fff;
+        }
+
+        .dropdown-submenu.pull-left {
+            float: none;
+        }
+
+        .dropdown-submenu.pull-left>.dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+
+    </style>
+
+    <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            var $subMenu = $(this).next(".dropdown-menu");
+            $subMenu.toggleClass('show');
+
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+
+
+            return false;
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="container-fluid justify-content-between p-3" style="background-color: #393939; width: 100%">
+        <div class="row m-auto" style="width: 90%">
+            <div class="col mr-auto m-b-d">
+                <div class="row m-auto pt-2">
+                    <div class="col tablet-delete" style="color: #a5a5a5; font-size: 14px">
+                        Default welcome message here
+                    </div>
+                    <div class="col phone-delete" style="color: #a5a5a5; font-size: 14px">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"></path>
+                        </svg>
+                        Call support free :<p class="d-inline" style="color: #ff2060"> +1800 12345 67890</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mt-2 mt-md-0">
+                <div class="row float-right pt-1">
+                    <a href="#" class="nav-link text-white change-pink-text transition mr-3" style="font-size: 13px">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-unlock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z"></path>
+                            <path fill-rule="evenodd" d="M8.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z"></path>
+                        </svg>
+                        Login
+                    </a>
+                    <a href="#" class="nav-link text-white change-pink-text transition mr-3" style="font-size: 13px">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z"></path>
+                            <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z"></path>
+                        </svg>
+                        Register
+                    </a>
+                    <a href="#" class="nav-link text-white change-pink-text transition" style="font-size: 13px">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-suit-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
+                        </svg>
+                        Whishlist
+                    </a>
+                    <a href="#" class="nav-link text-white transition ml-3 m-b-d" id="myCart">
+                        <i class="fa fa-shopping-cart transition"></i>
+                        My Cart (0)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-expand-md justify-content-around mt-5 mb-5">
+        <div><a href="#"><img src="product_files/logo.png"></a></div>
+
+        <div class="mr-lg-5 font-weight-bold" id="cart">
+            <p style="font-size: 18px" class="d-inline pr-3">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill m-b-d" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="#ff2060">
+                    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"></path>
+                </svg>
+                <span class="m-b-d">+91 213456789</span>
+                <select class="ml-3" id="money">
+                    <option>$ Us Dollar</option>
+                    <option>$ Us Dollar</option>
+                    <option selected="selected">$ Us Dollar</option>
+                </select>
+            </p>
+            <p class="d-inline pl-3" style="color: #a5a5a5; border-left: 3px solid #ff2060" ;="">English</p>
+
+        </div>
+
+    </div>
+
+    <nav class="navbar navbar-expand-md pt-0 pb-0" style="background-color: #333">
+        <div class="row" style="width: 75%; margin: auto">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-dark"><i class="fa fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item top-nav-item transition">
+                        <div class="dropdown">
+                            <a href="#" class="nav-link text-white pr-4 pl-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="d-d-1" style="font-size: 13px">
+                                HOME
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="d-d-1">
+                                <a class="dropdown-item transition change-pink-text drop-item">HOME 1</a>
+                                <a class="dropdown-item transition change-pink-text drop-item">HOME 2</a>
+                                <a class="dropdown-item transition change-pink-text drop-item">HOME 3</a>
+                                <a class="dropdown-item transition change-pink-text drop-item">HOME 4</a>
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item top-nav-item transition">
+                        <div class="dropdown">
+                            <a class="nav-link text-white text-decoration-none" href="#" id="men-dd" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" style="font-size: 13px">
+                                MEN
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item transition change-pink-text drop-item" href="#" id="home1-dd" role="button" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                                        HOME 1
+                                    </a>
+
+                                    <ul class="dropdown-menu">
+
+                                        <div class="d-md-flex align-items-start justify-content-start">
+                                            <div>
+                                                <div class="dropdown-header text-dark" style="font-size: 17px">MEN</div>
+                                                <div class="dropdown-divider" style="border-color: #ff2060"></div>
+                                                <a class="dropdown-item change-pink-text transition p-3" style="border-bottom: 1px solid #a5a5a5" href="#">Accessories</a>
+                                                <a class="dropdown-item change-pink-text transition p-3" style="border-bottom: 1px solid #a5a5a5" href="#">Teen</a>
+                                                <a class="dropdown-item change-pink-text transition p-3" href="#">Kid </a>
+                                            </div>
+
+                                            <div>
+                                                <div class="dropdown-header text-dark" style="font-size: 17px">MEN</div>
+                                                <div class="dropdown-divider" style="border-color: #ff2060"></div>
+                                                <a class="dropdown-item change-pink-text transition p-3" style="border-bottom: 1px solid #a5a5a5" href="#">Accessories</a>
+                                                <a class="dropdown-item change-pink-text transition p-3" style="border-bottom: 1px solid #a5a5a5" href="#">Teen</a>
+                                                <a class="dropdown-item change-pink-text transition p-3" href="#">Kid </a>
+                                            </div>
+
+                                            <div>
+                                                <div class="dropdown-header text-dark" style="font-size: 17px">MEN</div>
+                                                <div class="dropdown-divider" style="border-color: #ff2060"></div>
+                                                <a class="dropdown-item change-pink-text transition p-3" style="border-bottom: 1px solid #a5a5a5" href="#">Accessories</a>
+                                                <a class="dropdown-item change-pink-text transition p-3" style="border-bottom: 1px solid #a5a5a5" href="#">Teen</a>
+                                                <a class="dropdown-item change-pink-text transition p-3" href="#">Kid </a>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item transition change-pink-text drop-item">HOME 2</a></li>
+                                <li><a class="dropdown-item transition change-pink-text drop-item">HOME 3</a></li>
+                                <li><a class="dropdown-item transition change-pink-text drop-item">HOME 4</a></li>
+                            </ul>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item top-nav-item transition">
+                        <a href="#" class="nav-link text-white pr-4 pl-4" style="font-size: 13px">
+                            WOMENS
+                        </a>
+                    </li>
+
+                    <li class="nav-item top-nav-item transition">
+                        <a href="#" class="nav-link text-white pr-4 pl-4" style="font-size: 13px">
+                            PAGES
+                        </a>
+                    </li>
+
+                    <li class="nav-item top-nav-item transition">
+                        <a href="#" class="nav-link text-white pr-4 pl-4" style="font-size: 13px">
+                            SHOP
+                        </a>
+                    </li>
+
+                    <li class="nav-item top-nav-item transition">
+                        <a href="#" class="nav-link text-white pr-4 pl-4" style="font-size: 13px">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+
+            <div><input class="collapse" id="mySearch" type="text"></div>
+
+            <button data-toggle="collapse" data-target="#mySearch" id="searchButton">
+                <svg width="1em" height="1em" viewBox="0 0 15 15" class="bi bi-search text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"></path>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container-fluid" style="background-color: #121212; padding:60px;" id="single">
+        <h1 class="text-center text-white font-weight-bold">SINGLE PRODUCT</h1>
+            <p class="text-center text-white w-50 m-auto pt-3" style="font-family: Constantia;" id="singlep"><i>This is Photoshop's version of Lorem Ipsum.
+                Proin gravida nibh vel velit auctor aliquet
+                Aenean sollicitudin, lorem quis bibendum auctor,
+                nisi elit consequat.</i></p>
+    </div>
+
+    <div class="container-fluid" style="margin-top: -30px; background-color: #f5f5f5; width: 75%">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="p-3 font-weight-bold" style="color: #ff2060">SINGLE PRODUCT</div>
+            </div>
+            <div class="col-sm-6">
+                <div class="float-right" id="bread" style="width: 50%">
+                    <ul class="breadcrumb float-right" id="breadul" style="background-color: #f5f5f5;">
+                        <li class="breadcrumb-item"><a class="transition change-pink-text" style=" color: #a5a5a5" href="http://localhost:63342/html_niloofar/template1/main.html">Home</a></li>
+                        <li class="breadcrumb-item active"><a class="transition change-pink-text" style=" color: #ff2060" href="#">Product Name</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid" id="all-con" style="margin-top: 80px; width: 80%">
+        <div class="row">
+            <div class="col-sm-5 p-0 m-0">
+                <div class="row">
+                    <img src="product_files/black.jpg" style="width: 100%">
+                </div>
+
+                <div class="row">
+                    <div class="carousel slide mt-4" data-ride="carousel" id="cat">
+                        <ul class="carousel-indicators">
+                            <li data-target="#cat" data-slide-to="0" class=""></li>
+                            <li data-target="#cat" data-slide-to="1" class=""></li>
+                            <li data-target="#cat" data-slide-to="2" class="active"></li>
+                        </ul>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="product_files/black.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d1.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d2.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d3.jpeg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="product_files/black.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d1.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d2.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d3.jpeg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="product_files/black.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d1.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d2.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <img src="product_files/d3.jpeg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#cat" data-slide="prev" style="color: black">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#cat" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+
+                    <div class="carousel slide mt-4" data-ride="carousel" id="cat-small">
+                        <ul class="carousel-indicators">
+                            <li data-target="#cat-small" data-slide-to="0" class="active"></li>
+                            <li data-target="#cat-small" data-slide-to="1"></li>
+                            <li data-target="#cat-small" data-slide-to="2"></li>
+                            <li data-target="#cat-small" data-slide-to="3"></li>
+                            <li data-target="#cat-small" data-slide-to="4"></li>
+                            <li data-target="#cat-small" data-slide-to="5"></li>
+                        </ul>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="product_files/d2.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col">
+                                        <img src="product_files/d1.jpg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="product_files/d2.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col">
+                                        <img src="product_files/d3.jpeg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="product_files/d3.jpeg" style="width: 100%">
+                                    </div>
+                                    <div class="col">
+                                        <img src="product_files/d4.jpg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="product_files/d4.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col">
+                                        <img src="product_files/d1.jpg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="product_files/d1.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col">
+                                        <img src="product_files/d2.jpg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="product_files/black.jpg" style="width: 100%">
+                                    </div>
+                                    <div class="col">
+                                        <img src="product_files/d1.jpg" style="width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#cat-small" data-slide="prev" style="color: black">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#cat-small" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6 ml-5" id="half-all">
+                <div class="row " style="width: 50%" id="stock">
+                    <div class="col text-white p-2 m-1 rounded-left text-center" style="background-color: #24c869;">
+                        In Stock
+                    </div>
+                    <div class="col p-2 m-1 rounded-right text-center" style="background-color: #fbfafa; color: #a5a5a5">
+                        47 in Stock
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <h2>the Shop Template Baby
+                        Swimsuit - White</h2>
+                </div>
+
+                <div class="row mt-1">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star m-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: #ff2060">
+                        <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                    </svg>
+
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star m-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: #ff2060">
+                        <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                    </svg>
+
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star m-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: #ff2060">
+                        <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                    </svg>
+
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star m-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: #ff2060">
+                        <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                    </svg>
+
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star m-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                    </svg>
+
+                    <p class="d-inline" style="color: #a5a5a5">- 5 Reviews</p>
+                </div>
+
+                <div class="row mt-1">
+                    <p style="font-family: Constantia; color: #a5a5a5" class="font-italic">This is Photoshop's version of Lorem Ipsum.
+                        Proin gravida nibh velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
+                        nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                </div>
+
+                <table class="table table-bordered mt-1">
+                    <tbody>
+                        <tr class="p-4">
+                            <td style="border-right: 1px dashed #e2e3e5">
+                                Quantity
+                            </td>
+                            <td>
+                            <div class="btn-group" style="border: 1px solid #e5e5e5; width: 50%">
+                                <button class="d-inline m-0 col-3" style="background-color: #f9f9f9; border: none">-</button>
+                                <input class="form-control d-inline m-0 col-6 text-center rounded-0" id="myTextCount" type="text" value="2" style="background-color: white">
+                                <button class="d-inline m-0 col-3" style="background-color: #f9f9f9; border: none">+</button>
+                            </div>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="border-right: 1px dashed #e2e3e5">
+                            Select Size
+                            </td>
+                            <td>
+                            <a class="border p-2 m-2 text-center text-decoration-none text-dark size" href="#">XS</a>
+                            <a class="border p-2 m-2 pl-3 pr-3 text-center text-decoration-none text-dark size" href="#">S</a>
+                            <a class="border p-2 m-2 pl-3 pr-3 text-center text-decoration-none text-dark size" href="#">M</a>
+                            <a class="border p-2 m-2 pl-3 pr-3 text-center text-decoration-none text-dark size" href="#">L</a>
+                            <a class="border p-2 m-2 text-center text-decoration-none text-dark size" href="#">XL</a>
+                            </td>
+                        </tr>
+
+                        <tr class="p-4">
+                            <td style="border-right: 1px dashed #e2e3e5">
+                                Colours
+                            </td>
+                            <td>
+                                <div class="bg-danger text-white d-inline p-2">red</div>
+                                <div class="bg-warning text-white d-inline p-2 m-2">yellow</div>
+                                <div class="bg-dark text-white d-inline p-2">black</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row mt-3 mb-0 pb-0">
+                    <h2 class="font-weight-bold">$ 127.86</h2>
+                </div>
+
+                <div class="row mt-0 pt-0">
+                    <p class="font-italic" style="color: #a5a5a5; font-family:Constantia ">Free shipping on int'l orders usd $150+</p>
+                </div>
+
+                <div class="row mt-3">
+                    <button class="btn-dark transition" id="addCart">ADD TO CART</button>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="pl-4 pt-0 mt-4" id="boxes">
+                        <div class="row">
+                            <div class="col-sm-4 border pt-4 pb-3 m-2">
+                                <div class="row mb-3">
+                            <span class="m-auto">
+                                <img src="product_files/b1.png">
+                            </span>
+                                </div>
+
+                                <h5 class="text-center" style="font-size: 13px">Satisfied or Money Back</h5>
+                            </div>
+
+                            <div class="col-sm-4 border pt-4 pb-3 m-2">
+                                <div class="row mb-3">
+                            <span class="m-auto">
+                                <img src="product_files/b2.png">
+                            </span>
+                                </div>
+                                <h5 class="text-center" style="font-size: 13px">30 Day Return Policy </h5>
+                            </div>
+
+                            <div class="col-sm-4 border pt-4 pb-3 m-2">
+                                <div class="row mb-3">
+                            <span class="m-auto">
+                                <img src="product_files/b3.png">
+                            </span>
+                                </div>
+                                <h5 class="text-center" style="font-size: 13px"> Guaranteed 5 Day Delivery</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="container">
+                <!-- Nav pills -->
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link tab-bar transition active" data-toggle="pill" href="#description">DESCRIPTION</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link transition tab-bar" data-toggle="pill" href="#question">QUESTION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link transition tab-bar" data-toggle="pill" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link transition tab-bar" data-toggle="pill" href="#reviews">REVIEWS</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div id="description" class="container tab-pane active mt-3 p-4" style="background-color: #f5f5f5"><br>
+                        <p class="font-italic" style="color: #a5a5a5; font-family: Constantia; font-size: 14px">This is Photoshop's version of Lorem Ipsum.
+                            Proin gravida nibh velit auctor aliquet.
+                            Aenean sollicitudin, lorem quis bibendum auctor,
+                            nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                            Sed non mauris vitae erat consequat auctor eu in elit.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
+
+                    <div id="question" class="container tab-pane mt-3 p-4" style="background-color: #f5f5f5"><br>
+                        <h5 class="font-weight-bold">Q. Proin gravida nibh velit auctor aliquet?</h5>
+                        <p class="font-italic" style="color: #a5a5a5; font-family: Constantia; font-size: 14px">This is Photoshop's version of Lorem Ipsum.
+                            Proin gravida nibh velit auctor aliquet.
+                            Aenean sollicitudin, lorem quis bibendum auctor,
+                            nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                            Sed non mauris vitae erat consequat auctor eu in elit.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
+
+                    <div id="about" class="container tab-pane mt-3 p-4" style="background-color: #f5f5f5"><br>
+                        <h2>About this product</h2>
+                        <p class="font-italic" style="color: #a5a5a5; font-family: Constantia; font-size: 14px">This is Photoshop's version of Lorem Ipsum.
+                            Proin gravida nibh velit auctor aliquet.
+                            Aenean sollicitudin, lorem quis bibendum auctor,
+                            nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                            Sed non mauris vitae erat consequat auctor eu in elit.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
+
+                    <div id="reviews" class="container tab-pane mt-3 p-4" style="background-color: #f5f5f5"><br>
+                        <p class="font-italic" style="color: #a5a5a5; font-family: Constantia; font-size: 14px">This is Photoshop's version of Lorem Ipsum.
+                            Proin gravida nibh velit auctor aliquet.
+                            Aenean sollicitudin, lorem quis bibendum auctor,
+                            nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                            velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                            Sed non mauris vitae erat consequat auctor eu in elit.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid fixed-distance fixed-size mt-5">
+        <div class="container m-auto">
+            <h4 class="text-center font-weight-bold">FEATURED PRODUCTS</h4>
+            <p class="font-italic text-center line-under" style="color: gray; font-size: 13px">
+                Check out the best offers to stay in Trend
+            </p>
+
+            <div class="container line"></div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card border-0 rounded-0">
+                        <a href="#"><img class="card-img-top back-white transition" src="product_files/d1.jpg" style="width: 100%">
+                            <div class="block-bottom transition">
+                                <div class="btn-group btn-group-vertical">
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="margin-left: -1px; border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shuffle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M12.646 1.146a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 4l-2.147-2.146a.5.5 0 0 1 0-.708zm0 8a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 12l-2.147-2.146a.5.5 0 0 1 0-.708z"></path>
+                                            <path fill-rule="evenodd" d="M0 4a.5.5 0 0 1 .5-.5h2c3.053 0 4.564 2.258 5.856 4.226l.08.123c.636.97 1.224 1.865 1.932 2.539.718.682 1.538 1.112 2.632 1.112h2a.5.5 0 0 1 0 1h-2c-1.406 0-2.461-.57-3.321-1.388-.795-.755-1.441-1.742-2.055-2.679l-.105-.159C6.186 6.242 4.947 4.5 2.5 4.5h-2A.5.5 0 0 1 0 4z"></path>
+                                            <path fill-rule="evenodd" d="M0 12a.5.5 0 0 0 .5.5h2c3.053 0 4.564-2.258 5.856-4.226l.08-.123c.636-.97 1.224-1.865 1.932-2.539C11.086 4.93 11.906 4.5 13 4.5h2a.5.5 0 0 0 0-1h-2c-1.406 0-2.461.57-3.321 1.388-.795.755-1.441 1.742-2.055 2.679l-.105.159C6.186 9.758 4.947 11.5 2.5 11.5h-2a.5.5 0 0 0-.5.5z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body pb-1" style="border-bottom: 1px dashed lightgray">
+                            <a href="#" class="change-pink-text transition text-dark font-weight-bold" style="font-size: 11px">DARK SCALE T-SHIRT</a>
+                            <div class="d-inline float-right font-weight-bold" style="font-size: 11px; color: #ff2060"><i style="font-size:11px; background-color: white; color: #ff2060" class="fa"></i>56</div>
+                        </div>
+                        <div class="card-footer" style="background-color: white;">
+                            <p class="font-italic" style="color: gray; font-size: 11px;">Soft and comforting outwear</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card border-0 rounded-0">
+                        <a href="#"><img class="card-img-top back-white transition" src="product_files/d2.jpg" style="width: 100%">
+                            <div class="block-bottom transition">
+                                <div class="btn-group btn-group-vertical">
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="margin-left: -1px; border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shuffle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M12.646 1.146a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 4l-2.147-2.146a.5.5 0 0 1 0-.708zm0 8a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 12l-2.147-2.146a.5.5 0 0 1 0-.708z"></path>
+                                            <path fill-rule="evenodd" d="M0 4a.5.5 0 0 1 .5-.5h2c3.053 0 4.564 2.258 5.856 4.226l.08.123c.636.97 1.224 1.865 1.932 2.539.718.682 1.538 1.112 2.632 1.112h2a.5.5 0 0 1 0 1h-2c-1.406 0-2.461-.57-3.321-1.388-.795-.755-1.441-1.742-2.055-2.679l-.105-.159C6.186 6.242 4.947 4.5 2.5 4.5h-2A.5.5 0 0 1 0 4z"></path>
+                                            <path fill-rule="evenodd" d="M0 12a.5.5 0 0 0 .5.5h2c3.053 0 4.564-2.258 5.856-4.226l.08-.123c.636-.97 1.224-1.865 1.932-2.539C11.086 4.93 11.906 4.5 13 4.5h2a.5.5 0 0 0 0-1h-2c-1.406 0-2.461.57-3.321 1.388-.795.755-1.441 1.742-2.055 2.679l-.105.159C6.186 9.758 4.947 11.5 2.5 11.5h-2a.5.5 0 0 0-.5.5z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body pb-1" style="border-bottom: 1px dashed lightgray">
+                            <a href="#" class="change-pink-text transition text-dark font-weight-bold" style="font-size: 11px">DARK SCALE T-SHIRT</a>
+                            <div class="d-inline float-right font-weight-bold" style="font-size: 11px; color: #ff2060"><i style="font-size:11px; background-color: white; color: #ff2060" class="fa"></i>56</div>
+                        </div>
+                        <div class="card-footer" style="background-color: white;">
+                            <p class="font-italic" style="color: gray; font-size: 11px;">Soft and comforting outwear</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card border-0 rounded-0">
+                        <a href="#"><img class="card-img-top back-white transition" src="product_files/d3.jpeg" style="width: 100%">
+                            <div class="block-bottom transition">
+                                <div class="btn-group btn-group-vertical">
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="margin-left: -1px; border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shuffle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M12.646 1.146a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 4l-2.147-2.146a.5.5 0 0 1 0-.708zm0 8a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 12l-2.147-2.146a.5.5 0 0 1 0-.708z"></path>
+                                            <path fill-rule="evenodd" d="M0 4a.5.5 0 0 1 .5-.5h2c3.053 0 4.564 2.258 5.856 4.226l.08.123c.636.97 1.224 1.865 1.932 2.539.718.682 1.538 1.112 2.632 1.112h2a.5.5 0 0 1 0 1h-2c-1.406 0-2.461-.57-3.321-1.388-.795-.755-1.441-1.742-2.055-2.679l-.105-.159C6.186 6.242 4.947 4.5 2.5 4.5h-2A.5.5 0 0 1 0 4z"></path>
+                                            <path fill-rule="evenodd" d="M0 12a.5.5 0 0 0 .5.5h2c3.053 0 4.564-2.258 5.856-4.226l.08-.123c.636-.97 1.224-1.865 1.932-2.539C11.086 4.93 11.906 4.5 13 4.5h2a.5.5 0 0 0 0-1h-2c-1.406 0-2.461.57-3.321 1.388-.795.755-1.441 1.742-2.055 2.679l-.105.159C6.186 9.758 4.947 11.5 2.5 11.5h-2a.5.5 0 0 0-.5.5z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body pb-1" style="border-bottom: 1px dashed lightgray">
+                            <a href="#" class="change-pink-text transition text-dark font-weight-bold" style="font-size: 11px">DARK SCALE T-SHIRT</a>
+                            <div class="d-inline float-right font-weight-bold" style="font-size: 11px; color: #ff2060"><i style="font-size:11px; background-color: white; color: #ff2060" class="fa"></i>56</div>
+                        </div>
+                        <div class="card-footer" style="background-color: white;">
+                            <p class="font-italic" style="color: gray; font-size: 11px;">Soft and comforting outwear</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card border-0 rounded-0">
+                        <a href="#"><img class="card-img-top back-white transition" src="product_files/d4.jpg" style="width: 100%">
+                            <div class="block-bottom transition">
+                                <div class="btn-group btn-group-vertical">
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="margin-left: -1px; border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3" style="border-bottom:1px solid gray">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shuffle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M12.646 1.146a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 4l-2.147-2.146a.5.5 0 0 1 0-.708zm0 8a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.793 12l-2.147-2.146a.5.5 0 0 1 0-.708z"></path>
+                                            <path fill-rule="evenodd" d="M0 4a.5.5 0 0 1 .5-.5h2c3.053 0 4.564 2.258 5.856 4.226l.08.123c.636.97 1.224 1.865 1.932 2.539.718.682 1.538 1.112 2.632 1.112h2a.5.5 0 0 1 0 1h-2c-1.406 0-2.461-.57-3.321-1.388-.795-.755-1.441-1.742-2.055-2.679l-.105-.159C6.186 6.242 4.947 4.5 2.5 4.5h-2A.5.5 0 0 1 0 4z"></path>
+                                            <path fill-rule="evenodd" d="M0 12a.5.5 0 0 0 .5.5h2c3.053 0 4.564-2.258 5.856-4.226l.08-.123c.636-.97 1.224-1.865 1.932-2.539C11.086 4.93 11.906 4.5 13 4.5h2a.5.5 0 0 0 0-1h-2c-1.406 0-2.461.57-3.321 1.388-.795.755-1.441 1.742-2.055 2.679l-.105.159C6.186 9.758 4.947 11.5 2.5 11.5h-2a.5.5 0 0 0-.5.5z"></path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn btn-dark rounded-0 change-pink-back pt-2 pb-3">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body pb-1" style="border-bottom: 1px dashed lightgray">
+                            <a href="#" class="change-pink-text transition text-dark font-weight-bold" style="font-size: 11px">DARK SCALE T-SHIRT</a>
+                            <div class="d-inline float-right font-weight-bold" style="font-size: 11px; color: #ff2060"><i style="font-size:11px; background-color: white; color: #ff2060" class="fa"></i>56</div>
+                        </div>
+                        <div class="card-footer" style="background-color: white;">
+                            <p class="font-italic" style="color: gray; font-size: 11px;">Soft and comforting outwear</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid" style="background-image: url('images/560645.jpg')">
+
+        <div class="row fixed-size pb-5" style="width: 75%; margin: auto">
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="text-white" style="margin-top: 50px">
+                        Post From Blog
+                        <br>
+                        <img src="product_files/line.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media" style="background-color: #333333">
+                            <img src="product_files/g.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/e.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/s.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="text-white" style="margin-top: 50px">
+                        Post From Blog
+                        <br>
+                        <img src="product_files/line.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media" style="background-color: #333333">
+                            <img src="product_files/g.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/e.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/s.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="text-white" style="margin-top: 50px">
+                        Post From Blog
+                        <br>
+                        <img src="product_files/line.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media" style="background-color: #333333">
+                            <img src="product_files/g.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/e.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/s.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="text-white" style="margin-top: 50px">
+                        Post From Blog
+                        <br>
+                        <img src="product_files/line.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media" style="background-color: #333333">
+                            <img src="product_files/g.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/e.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" mt-5" style="width: 90%">
+                        <div class="media">
+                            <img src="product_files/s.jpg" style="width: 40%">
+                            <div class="media-body">
+
+                                <a class="text-white text-center change-pink-text transition font-italic" style="font-size: 15px; font-family: Constantia">this is photoshop's version of lorem</a>
+                                <p class="mt-auto" style="color: #ff2060">Dec 6 2015</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer style="background-color: #333333">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="form m-auto" style="width: 80%">
+                <input type="email" class="font-italic m-auto" placeholder="Enter Your Email" style="width: 65%; height: 45px">
+                <input type="submit" value="SUBSCRIBE" style="color: white; width: 32%; background-color: #ff2060; font-weight: bolder; border: none; height: 45px">
+
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 50px; margin-top: 50px">
+            <a href="#" class="m-auto"><img src="product_files/logo2.png"></a>
+        </div>
+        <div class="row m-b-d">
+            <p class="mr-auto ml-auto text-center font-italic" style="width: 40%;color: #a5a5a5">This is Photoshop's version of Lorem Ipsum.
+                Proin gravida nibh vel velit auctor aliquet.
+                Aenean sollicitudin, lorem quis bibendum auctor,
+                nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+        </div>
+
+        <div class="row">
+            <div style="margin: auto">
+                <a href="#" class="fas fa fa-facebook change-pink-back transition"></a>
+                <a href="#" class="fas fa fa-twitter change-pink-back transition"></a>
+                <a href="#" class="fas fa fa-google change-pink-back transition"></a>
+                <a href="#" class="fas fa fa-linkedin change-pink-back transition"></a>
+                <a href="#" class="fas fa fa-skype change-pink-back transition"></a>
+            </div>
+
+        </div>
+
+
+    </div>
+</footer>
+
+</body></html>

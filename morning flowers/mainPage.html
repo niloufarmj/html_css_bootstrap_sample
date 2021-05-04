@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <title>
+        Online Flowers Delivery
+    </title>
+    <link rel="icon" href="images/new_logo_-min.png" />
+    <style>
+        body {
+            background-image: url('images/main-back.jpg');
+        }
+        .red-on .red-border {
+            -o-transition:.5s;
+            -ms-transition:.5s;
+            -moz-transition:.5s;
+            -webkit-transition:.5s;
+            /* ...and now for the proper property */
+            transition:.5s;
+        }
+
+        a.red-on:hover {
+            color: red !important;
+        }
+
+        a.back-white:hover {
+            background-color: white !important;
+        }
+
+        div.red-border:hover {
+            border:1px solid red !important;
+        }
+
+        div.gray-border:hover {
+            border: 1px solid gray !important;
+        }
+
+        /* For mobile phones: */
+
+
+        @media only screen and (min-width: 600px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+
+            #carousel-big, #button-carousel-big {
+                display: block;
+            }
+            #carousel-small, #button-carousel-small {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            [class*="col-"] {
+                width: 100%;
+                display: block;
+            }
+            #head2 , #head1-car {
+                display: none;
+            }
+
+            #carousel-small, #button-carousel-small {
+                display: block;
+            }
+
+            #carousel-big, #button-carousel-big, #logo-button {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand" style="background-color: #4DF6C7">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-dark"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topNavbarCollapse">
+            <div class="navbar-nav mr-auto" id="head1-car">
+                <img src="images/delivery_van.png" style="width: 60px; height: 30px">
+                <i>FREE UK NEXT DAY DELIVERY ON ALL ORDERS
+                </i>
+            </div>
+
+            <ul class="navbar-nav mt-2 mt-md-0">
+                <li class="nav-item">
+                    <a class="nav-link text-dark border-right red-on" href="#">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3.925 1.745a.636.636 0 0 0-.951-.059l-.97.97c-.453.453-.62 1.095-.421 1.658A16.47 16.47 0 0 0 5.49 10.51a16.471 16.471 0 0 0 6.196 3.907c.563.198 1.205.032 1.658-.421l.97-.97a.636.636 0 0 0-.06-.951l-2.162-1.682a.636.636 0 0 0-.544-.115l-2.052.513a1.636 1.636 0 0 1-1.554-.43L5.64 8.058a1.636 1.636 0 0 1-.43-1.554l.513-2.052a.636.636 0 0 0-.115-.544L3.925 1.745zM2.267.98a1.636 1.636 0 0 1 2.448.153l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                        </svg>
+                        contact us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark border-right red-on" href="#">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bullseye" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path fill-rule="evenodd" d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+                            <path fill-rule="evenodd" d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+                            <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        Order tracking
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link text-dark" href="#">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: #FFFF41">
+                            <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        </svg>
+                        Login or Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand justify-content-around mt-1" id="head2" style="background-color: #4DF6C7">
+        <div class="float-left">
+            <a href="mainPage.html"><img src="images/new_logo_-min2.png"></a>
+        </div>
+        <div style="font-family: 'Times New Roman'" class="mr-lg-5">
+            <h2 class="text-white text-center"><i>SAY IT WITH FLOWERS</i></h2>
+            <h4 class="text-white text-center"><i>More Than 10 Years Of Experience</i></h4>
+        </div>
+        <div class="text-dark mr-lg-5"><a class="nav-link text-dark red-on" href="#">
+            £0.00
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg>
+            <span class="badge badge-danger rounded-circle">0</span>
+        </a>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-md" style="background-color: #10AB8E; width: 100%">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-dark"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown" >
+                        <a class="nav-link text-white font-weight-bold dropdown-toggle" id="d-d-1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Shop By Occasion</a>
+                        <div class="dropdown-menu" aria-labelledby="d-d-1">
+                            <div class="container">
+
+                            <div class="row">
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        ANNIVERSARY FLOWERS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        CONGRATULATIONS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        ROMANCE FLOWERS
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        BABY BOY FLOWERS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        FUNERAL FLOWERS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        SURPRISE FLOWERS
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        BABY GIRLS FLOWERS AND GIFTS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        GET WELL FLOWERS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        SYMPATHY FLOWERS
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        BIRTHDAY FLOWERS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        HOUSE WARMING FLOWERS
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a class="dropdown-item red-on back-white" href="#">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-layers-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+                                            <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+                                        </svg>
+                                        THANK YOU FLOWERS
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="#">Birthday Flowers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="#">Romance Flowers</a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link text-white font-weight-bold dropdown-toggle" data-toggle="dropdown" href="#">Shop By Product</a>
+                        <div class="dropdown-menu" >
+                            <a class="dropdown-item red-on back-white" href="#">Balloons</a>
+                            <a class="dropdown-item red-on back-white" href="#">Chocolates</a>
+                            <a class="dropdown-item red-on back-white" href="#">Teddy Bears</a>
+                            <a class="dropdown-item red-on back-white" href="#">Roses</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="#">Contact Us</a>
+                </li>
+            </ul>
+
+            <form class="form-inline mt-2 mt-md-0">
+                <div class="input-group">
+                    <input class="rounded-left border-0" placeholder=" Search for products ...">
+                    <div class="input-group-append">
+                        <span class="input-group-text bg-warning">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </nav>
+</header>
+
+<main>
+    <div class="container-fluid mt-2 p-3 m-auto" style=" width: 75%">
+
+        <div class="row" >
+            <div style="background-color: #10AB8E; width: 100%">
+                <h1 class="text-center text-white font-weight-bold" style="font-family: 'Eras Bold ITC',serif">SAY IT WITH FLOWERS</h1>
+                <p class="text-center text-dark">Click The Category To See Products</p>
+            </div>
+        </div>
+
+        <div class="row m-auto " id="carousel-big">
+            <div id="top-image-cat-big" class="carousel slide align-items-center m-auto" data-ride="carousel" >
+
+                <ul class="carousel-indicators">
+                    <li data-target="#top-image-cat-big" data-slide-to="0" class="active"></li>
+                    <li data-target="#top-image-cat-big" data-slide-to="1"></li>
+                    <li data-target="#top-image-cat-big" data-slide-to="2"></li>
+
+                </ul>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="card  red-border" >
+                                        <a href="#" class="text-decoration-none" ><img src="images/felicity3.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Anniversary Flowers</h5>
+                                                <p class="card-text text-dark text-center">18 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/sweet-memories1.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Boy Flowers</h5>
+                                                <p class="card-text text-dark text-center">14 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Belle-in-pink3.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Girls Flowers</h5>
+                                                <p class="card-text text-dark text-center">21 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Classic-beauty2.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Birthday Flowers</h5>
+                                                <p class="card-text text-dark text-center">40 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Scented-cheer1.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Thank You Flowers</h5>
+                                                <p class="card-text text-dark text-center">11 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Single-ended-funeral-spray-.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Christmas Flowers</h5>
+                                                <p class="card-text text-dark text-center">8 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Sugar-pop3.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Congratulations</h5>
+                                                <p class="card-text text-dark text-center">16 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/IMG_0207-.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Funeral Flowers</h5>
+                                                <p class="card-text text-dark text-center">6 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Pretty-pink1.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Get Well Flowers</h5>
+                                                <p class="card-text text-dark text-center">16 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/IMG_0207-.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92; font-size: 16px">House Warming Flowers</h5>
+                                                <p class="card-text text-dark text-center">16 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Pure-white-roses1.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Surprise Flowers</h5>
+                                                <p class="card-text text-dark text-center">18 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card  red-border">
+                                        <a href="#" class="text-decoration-none" ><img src="images/Luxury-red-roses1.jpg" height="270px" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Sympathy Flowers</h5>
+                                                <p class="card-text text-dark text-center">13 items</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#top-image-cat-big" data-slide="prev" style="color: black">
+                    <span class="carousel-control-prev-icon" ></span>
+                </a>
+                <a class="carousel-control-next" href="#top-image-cat-big" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="row m-auto" id="carousel-small">
+            <div id="top-image-cat-small" class="carousel slide align-items-center m-auto" data-ride="carousel" >
+                <ul class="carousel-indicators">
+                    <li data-target="#top-image-cat-small" data-slide-to="0" class="active"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="1"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="2"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="3"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="4"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="5"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="6"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="7"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="8"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="9"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="10"></li>
+                    <li data-target="#top-image-cat-small" data-slide-to="11"></li>
+                </ul>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card  red-border" >
+                            <a href="#" class="text-decoration-none" ><img src="images/felicity3.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Anniversary Flowers</h5>
+                                    <p class="card-text text-dark text-center">18 items</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/sweet-memories1.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Boy Flowers</h5>
+                                    <p class="card-text text-dark text-center">14 items</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/Belle-in-pink3.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Girls Flowers</h5>
+                                    <p class="card-text text-dark text-center">21 items</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/Classic-beauty2.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Birthday Flowers</h5>
+                                    <p class="card-text text-dark text-center">40 items</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/Scented-cheer1.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Thank You Flowers</h5>
+                                    <p class="card-text text-dark text-center">11 items</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/Single-ended-funeral-spray-.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Christmas Flowers</h5>
+                                    <p class="card-text text-dark text-center">8 items</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/Sugar-pop3.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Congratulations</h5>
+                                    <p class="card-text text-dark text-center">16 items</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/IMG_0207-.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Funeral Flowers</h5>
+                                    <p class="card-text text-dark text-center">6 items</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/Pretty-pink1.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Get Well Flowers</h5>
+                                    <p class="card-text text-dark text-center">16 items</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card  red-border">
+                            <a href="#" class="text-decoration-none" ><img src="images/IMG_0207-.jpg" height="270px" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92; font-size: 16px">House Warming Flowers</h5>
+                                    <p class="card-text text-dark text-center">16 items</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#top-image-cat-small" data-slide="prev" style="color: black">
+                    <span class="carousel-control-prev-icon" ></span>
+                </a>
+                <a class="carousel-control-next" href="#top-image-cat-small" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid m-auto">
+        <div class="row">
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2">
+                <div class="row mb-3">
+                    <div class="card shadow" style="width: 100%; display: inline-block">
+                        <a href="#" class="text-decoration-none"><img src="images/Single-ended-funeral-spray-.jpg" class="card-img-top"></a>
+                        <div class="card-body" style="background-color: #0f6674">
+                            <h4 class="card-title text-center text-white font-weight-bold">Grace</h4>
+                            <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">17.5</h5> 26.5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="card shadow" style="width: 100%; display: inline-block">
+                        <a href="#" class="text-decoration-none"><img src="images/Single-ended-funeral-spray-.jpg" class="card-img-top"></a>
+                        <div class="card-body" style="background-color: #0f6674">
+                            <h4 class="card-title text-center text-white font-weight-bold">Grace</h4>
+                            <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">17.5</h5> 26.5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="card shadow" style="width: 100%; display: inline-block">
+                        <a href="#" class="text-decoration-none"><img src="images/Single-ended-funeral-spray-.jpg" class="card-img-top"></a>
+                        <div class="card-body" style="background-color: #0f6674">
+                            <h4 class="card-title text-center text-white font-weight-bold">Grace</h4>
+                            <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">17.5</h5> 26.5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <div class="card shadow rounded">
+                            <a href="#" class="text-decoration-none"><img src="images/Sugar-pop3.jpg" class="card-img-top"></a>
+                            <div class="card-body" style="background-color: #0f6674">
+                                <h3 class="card-title text-center text-white font-weight-bold">A New Day</h3>
+                                <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">16.5</h5> 24.5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card shadow">
+                            <a href="#" class="text-decoration-none"><img src="images/Scented-cheer1.jpg" class="card-img-top"></a>
+                            <div class="card-body" style="background-color: #0f6674">
+                                <h3 class="card-title text-center text-white font-weight-bold">Meadow Fresh</h3>
+                                <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">17.5</h5> 25.5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <div class="card shadow">
+                            <a href="#" class="text-decoration-none"><img src="images/Classic-beauty2.jpg" class="card-img-top"></a>
+                            <div class="card-body" style="background-color: #0f6674">
+                                <h3 class="card-title text-center text-white font-weight-bold">A New Day</h3>
+                                <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">16.5</h5> 24.5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                            <div class="card shadow">
+                                <a href="#" class="text-decoration-none"><img src="images/Luxury-red-roses1.jpg" class="card-img-top"></a>
+                                <div class="card-body" style="background-color: #0f6674">
+                                    <h3 class="card-title text-center text-white font-weight-bold">A New Day</h3>
+                                    <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">16.5</h5> 24.5</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <div class="card shadow">
+                            <a href="#" class="text-decoration-none"><img src="images/Single-ended-funeral-spray-.jpg" class="card-img-top"></a>
+                            <div class="card-body" style="background-color: #0f6674">
+                                <h3 class="card-title text-center text-white font-weight-bold">A New Day</h3>
+                                <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">16.5</h5> 24.5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card shadow">
+                            <a href="#" class="text-decoration-none"><img src="images/IMG_0207-.jpg" class="card-img-top"></a>
+                            <div class="card-body" style="background-color: #0f6674">
+                                <h3 class="card-title text-center text-white font-weight-bold">A New Day</h3>
+                                <p class="card-text text-center"><h5 class="text-warning d-inline font-weight-bold">16.5</h5> 24.5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"></div>
+                </div>
+
+                <div class="row" id="button-carousel-big">
+                    <div class="container-fluid mt-2 p-3">
+                        <div class="row" >
+                            <div style="background-color: #10AB8E; width: 100%">
+                                <h1 class="text-center text-white font-weight-bold" style="font-family: 'Eras Bold ITC',serif">SAY IT WITH FLOWERS</h1>
+                                <p class="text-center text-dark">Click The Category To See Products</p>
+                            </div>
+                        </div>
+
+                        <div class="row m-auto" style="width: 100%">
+                            <div id="button-image-cat" class="carousel slide align-items-center" data-ride="carousel" style="width: 100%;">
+
+                                <ul class="carousel-indicators">
+                                    <li data-target="#top-image-cat" data-slide-to="0" class="active"></li>
+                                    <li data-target="#top-image-cat" data-slide-to="1"></li>
+                                    <li data-target="#top-image-cat" data-slide-to="2"></li>
+
+                                </ul>
+
+                                <div class="carousel-inner">
+
+                                    <div class="carousel-item active">
+                                        <div class="card  red-border" style="width: 33%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/felicity3.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Anniversary Flowers</h5>
+                                                    <p class="card-text text-dark text-center">18 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card  red-border" style="width: 33%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/sweet-memories1.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Boy Flowers</h5>
+                                                    <p class="card-text text-dark text-center">14 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card  red-border" style="width: 32%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Belle-in-pink3.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Girls Flowers</h5>
+                                                    <p class="card-text text-dark text-center">21 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="card  red-border" style="width: 33%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Scented-cheer1.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Thank You Flowers</h5>
+                                                    <p class="card-text text-dark text-center">11 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card  red-border" style="width: 33%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Single-ended-funeral-spray-.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Christmas Flowers</h5>
+                                                    <p class="card-text text-dark text-center">8 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card  red-border" style="width: 32%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Sugar-pop3.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Congratulations</h5>
+                                                    <p class="card-text text-dark text-center">16 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="carousel-item">
+
+                                        <div class="card  red-border" style="width: 33%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Pretty-pink1.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Get Well Flowers</h5>
+                                                    <p class="card-text text-dark text-center">16 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card  red-border" style="width: 33%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/IMG_0207-.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92; font-size: 16px">House Warming Flowers</h5>
+                                                    <p class="card-text text-dark text-center">16 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card  red-border" style="width: 32%; display: inline-block">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Pure-white-roses1.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Surprise Flowers</h5>
+                                                    <p class="card-text text-dark text-center">18 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <a class="carousel-control-prev" href="#button-image-cat" data-slide="prev" style="color: black">
+                                    <span class="carousel-control-prev-icon" ></span>
+                                </a>
+                                <a class="carousel-control-next" href="#button-image-cat" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row"  id="button-carousel-small">
+                    <div class="container-fluid mt-2 p-3">
+                        <div class="row" >
+                            <div style="background-color: #10AB8E; width: 100%">
+                                <h1 class="text-center text-white font-weight-bold" style="font-family: 'Eras Bold ITC',serif">SAY IT WITH FLOWERS</h1>
+                                <p class="text-center text-dark">Click The Category To See Products</p>
+                            </div>
+                        </div>
+
+                        <div class="row m-auto" style="width: 100%">
+                            <div id="button-image-cat-small" class="carousel slide align-items-center" data-ride="carousel" style="width: 100%;">
+
+                                <ul class="carousel-indicators">
+                                    <li data-target="#top-image-cat" data-slide-to="0" class="active"></li>
+                                    <li data-target="#top-image-cat" data-slide-to="1"></li>
+                                    <li data-target="#top-image-cat" data-slide-to="2"></li>
+                                    <li data-target="#top-image-cat" data-slide-to="3"></li>
+                                    <li data-target="#top-image-cat" data-slide-to="4"></li>
+                                    <li data-target="#top-image-cat" data-slide-to="5"></li>
+
+                                </ul>
+
+                                <div class="carousel-inner">
+
+                                    <div class="carousel-item active">
+                                        <div class="card  red-border">
+                                            <a href="#" class="text-decoration-none" ><img src="images/felicity3.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Anniversary Flowers</h5>
+                                                    <p class="card-text text-dark text-center">18 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="card  red-border">
+                                            <a href="#" class="text-decoration-none" ><img src="images/sweet-memories1.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Boy Flowers</h5>
+                                                    <p class="card-text text-dark text-center">14 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="card  red-border">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Belle-in-pink3.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Baby Girls Flowers</h5>
+                                                    <p class="card-text text-dark text-center">21 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="card  red-border">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Pretty-pink1.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Get Well Flowers</h5>
+                                                    <p class="card-text text-dark text-center">16 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="card  red-border">
+                                            <a href="#" class="text-decoration-none" ><img src="images/IMG_0207-.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92; font-size: 16px">House Warming Flowers</h5>
+                                                    <p class="card-text text-dark text-center">16 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="card  red-border">
+                                            <a href="#" class="text-decoration-none" ><img src="images/Pure-white-roses1.jpg" height="270px" class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="cart-title font-weight-bold text-center" style="color: #072f92">Surprise Flowers</h5>
+                                                    <p class="card-text text-dark text-center">18 items</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <a class="carousel-control-prev" href="#button-image-cat" data-slide="prev" style="color: black">
+                                    <span class="carousel-control-prev-icon" ></span>
+                                </a>
+                                <a class="carousel-control-next" href="#button-image-cat" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+                <div class="row mb-3">
+                    <div class="card shadow" style="width: 100%; display: inline-block">
+
+                        <div class="card-header"  style="background-color: cornflowerblue"><h5 class="text-white font-weight-bold">Deal Of The Day</h5> </div>
+
+                        <div id="day-deal" class="carousel slide align-items-center" data-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="#" class="text-decoration-none" >
+                                            <div class="card gray-border">
+                                                <img src="images/felicity3.jpg" height="270px" class="card-img-top  gray-border p-3">
+                                                <div class="card-body">
+                                                    <h5 class="text-dark">Lovely Mixed Roses</h5>
+                                                    <p class="text-dark"><h5 class="text-danger d-inline font-weight-bold">26.5</h5> 36.5</p>
+                                                </div>
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="#" class="text-decoration-none" >
+                                            <div class="card gray-border">
+                                                <img src="images/Scented-cheer1.jpg" height="270px" class="card-img-top  gray-border p-3">
+                                                <div class="card-body">
+                                                    <h5 class="text-dark">Lovely Mixed Roses</h5>
+                                                    <p class="text-dark"><h5 class="text-danger d-inline font-weight-bold">26.5</h5> 36.5</p>
+                                                </div>
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="card" style="width: 100%;">
+                                        <a href="#" class="text-decoration-none" >
+                                            <div class="card gray-border">
+                                                <img src="iimages/Pretty-pink1.jpg" height="270px" class="card-img-top  gray-border p-3">
+                                                <div class="card-body">
+                                                    <h5 class="text-dark">Lovely Mixed Roses</h5>
+                                                    <p class="text-dark"><h5 class="text-danger d-inline font-weight-bold">26.5</h5> 36.5</p>
+                                                </div>
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a class="carousel-control-prev" href="#day-deal" data-slide="prev" style="color: black">
+                                <span class="carousel-control-prev-icon" ></span>
+                            </a>
+                            <a class="carousel-control-next" href="#day-deal" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+
+                        <div class="card-body" style="background-color: cornflowerblue">
+                            <h2 class="cart-title text-center text">00 : 00 : 00</h2>
+                            <pre class="card-text text-dark text-center">HRS    MINS    SECS</pre>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <img src="images/IMG_7323.jpg" width="100%">
+                </div>
+
+                <div class="row mb-3">
+                    <img src="images/top_banner_002.jpg" width="100%">
+                </div>
+            </div>
+
+            <div class="col-sm-1"></div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer style="background-color: rgba(16, 102, 116, 0.6)">
+
+    <div class="container-fluid pt-4 pb-2">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            
+            <div class="col-sm-2" id="logo-button">
+                <img src="images/new_logo_-min.png">
+                <div style="font-family: 'Times New Roman'" class="text-center">
+                    <h4 class="text-white"><i>SAY IT WITH FLOWERS</i></h4>
+                    <h5 class="text-white"><i>More Than 10 Years Of Experience</i></h5>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="text-white">
+                    <h5 class="font-weight-bold" style="font-size: 15px">About</h5>
+                    <p style="font-size: 11px">
+                        Morning Flowers is devoted to bring the quality
+                        Bouquet in the continent. We are translating our
+                        knowledge and skills of our original background
+                        that has been passed to us through generations.
+                        This has been evolved into western like taste,
+                        which makes it very unique and can be seen on Our
+                        range of flower bouquets and luxury gift boxes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="text-white">
+                    <h5 class="font-weight-bold" style="font-size: 15px">Contact Us</h5>
+                    <p style="font-size: 10px">
+                        Unit 6, 58 Kingsbridge Cres, Southall UB1 2DL
+                    </p>
+                    <a href="mailto:support@morningflowers.com" class="text-warning border-bottom pb-2 rounded">support@morningflowers.com</a>
+
+                    <br><br>
+
+                    <a href="#" class="text-white">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: deeppink">
+                            <path fill-rule="evenodd" d="M12 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm-1.146 5.854a.5.5 0 0 0-.708-.708L7.5 8.793 6.354 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        </svg>
+                        Terms and Conditions
+                    </a>
+                    <br>
+                    <a href="#" class="text-white">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: deeppink">
+                            <path fill-rule="evenodd" d="M12 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm-1.146 5.854a.5.5 0 0 0-.708-.708L7.5 8.793 6.354 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        </svg>
+                        Our Privacy Policy
+                    </a>
+                    <p>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: deeppink">
+                            <path fill-rule="evenodd" d="M12 1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm-1.146 5.854a.5.5 0 0 0-.708-.708L7.5 8.793 6.354 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        </svg>
+                        COOKIE POLICY
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 text-white">
+                <h5 class="font-weight-bold" style="font-size: 15px">Subscribe Newsletter</h5>
+                <p style="font-size: 11px">
+                    Get the latest floral discounts and offers
+                </p>
+                <form action="#">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <input class="form-control" type="text" placeholder="First Name or Full Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <input class="form-control" type="email" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="form-control bg-success text-white" value="Subscribe">
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-sm-2"></div>
+
+        </div>
+    </div>
+
+</footer>
+
+</body>
+
+</html>

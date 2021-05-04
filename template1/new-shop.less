@@ -1,0 +1,335 @@
+@pink-red: #ff2060;
+@light-black: #333;
+@light-gray:#a5a5a5;
+@dark-black: #121212;
+
+#mySearch {
+  .color-white;
+  background-color: @light-black;
+  border: 1px solid @pink-red;
+  padding: 10px;
+  margin-right: 15px;
+  width: 300px;
+  margin-top: 15px;
+}
+
+#searchButton {
+  &:extend(.color-gray, .bg-black);
+}
+
+#single {
+  background-color: @dark-black;
+}
+
+#myCart {
+  .bg-pink;
+  border-radius: 5px;
+}
+
+#myCart:hover {
+  background-color: white;
+  color: black !important;
+}
+
+#myCart:hover i {
+  color: black !important;
+}
+
+#money {
+  .font(14px);
+  color: #c1a880;
+  border: none
+}
+
+#redIcon {
+  background-color: red;
+}
+
+#blueIcon {
+  background-color: blue;
+}
+
+#pinkIcon {
+  background-color: hotpink;
+}
+
+#whiteIcon {
+  background-color: white;
+}
+
+#blackIcon {
+  background-color: black;
+}
+
+#greenIcon {
+  background-color: green;
+}
+
+#yellowIcon {
+  background-color: yellow;
+}
+
+#orangeIcon {
+  background-color: orangered;
+}
+
+#girl-back {
+  .font(50px);
+  background-image: url('images/dark.jpg');
+  .pad-t-p-(180px);
+  opacity: 0.8
+}
+
+#jungle-back {
+  background-image: url('images/560645.jpg');
+}
+
+.star {
+  .font(20px);
+  color: @pink-red;
+}
+
+.gray-14 {
+  .font(14px);
+  .color-gray;
+}
+
+.font(@var) {
+  font-size: @var;
+}
+
+
+.transition {
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+a.change-pink-text:hover {
+  color: @pink-red !important;
+}
+
+.change-pink-text{
+
+}
+
+.myList li {
+  &:extend(.so-left);
+  .font(15px);
+  list-style: none;
+  text-align: left;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #eae6db;
+  .pad-t-p-(17px);
+
+}
+
+.top-nav-item {
+  .font(17px);
+  color: white;
+  font-weight: bold;
+  .pad-t-p-(17px);
+}
+
+.top-nav-item:hover {
+  background-color: black;
+  .b-pink;
+  border-bottom: 5px;
+  .color-pink;
+}
+
+.back-white:hover {
+  opacity: 0.6;
+}
+
+.card:hover .block-bottom{
+  display: block;
+}
+
+.block-bottom {
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.nav-item .active {
+  color: @pink-red !important;
+}
+
+.pad-t-p-(@val) {
+  padding-top: @val;
+  padding-bottom: @val;
+}
+
+
+a {
+  &:extend(.change-pink-text, .transition);
+  text-decoration: none;
+}
+
+.so-left {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.bl {
+  border-left: 3px;
+  .b-pink;
+}
+
+.br-lightgray {
+  border-right: 2px solid lightgray;
+}
+
+.bb-lightgray {
+  border-bottom: 1px dashed lightgray;
+}
+
+.b-light {
+  border: 1px solid #eae6db;
+}
+
+.b-pink {
+  border-color: @pink-red;
+  border-style: solid;
+}
+
+.bb-gray {
+  border-bottom: 1px solid @light-gray;
+}
+
+.bg-black {
+  background-color: #393939;
+}
+
+.bg-gray {
+  background-color: @light-gray;
+}
+
+.bg-blackdark {
+  background-color: @light-black;
+}
+
+.bg-white {
+  background-color: #f5f5f5;
+}
+
+.bg-pink {
+  background-color: @pink-red;
+}
+
+.bg-lightgray {
+  background-color: #f4f4f4;
+}
+
+.color-gray {
+  color: @light-gray;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-pink {
+  color: @pink-red;
+}
+
+.font-13 {
+  .font(13px);
+}
+
+.p-6 {
+  padding: 60px;
+}
+
+.mt-m-3 {
+  margin-top: -30px;
+}
+
+.icon {
+  .color-gray;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  padding: 6px;
+}
+
+.change-pink-text:hover .icon {
+  .bg-pink;
+  .color-white;
+}
+
+.scroll {
+  overflow-y: scroll;
+}
+
+.size {
+  background-color: #eae6db;
+  .color-gray;
+  padding: 7px;
+}
+
+.size:hover {
+  .bg-pink;
+  .color-white;
+  text-decoration: none;
+}
+
+.h-20px {
+  height: 20px;
+}
+
+.h-45px {
+  height: 45px;
+}
+
+.h-270 {
+  height: 270px;
+}
+button {
+  border: none;
+}
+
+.social {
+  padding: 5px;
+  .font(12px);
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  text-decoration: none;
+  .color-white;
+  background-color: #524f50;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+.font-11 {
+  .font(11px);
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
